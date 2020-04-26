@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>MINESWEEPER</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <h1>Welcome to MINESWEEPER Game</h1>
+            <h2>Developped and designed by H.Anasse</h2>
+
+            <div class="collapse" id="youLostBox">
+                <div class="card card-body">
+                    <h2>Game Over</h2>
+                    <p>Sorry, You lost !</p> 
+                    <button id="newGame" type="button" class="btn btn-primary">New game</button>
+                </div>
+            </div>
+
+            <div class="collapse" id="youWonBox">
+                <div class="card card-body">
+                    <h2>Congratulations</h2>
+                    <p>You Won !</p> 
+                    <button id="newGame" type="button" class="btn btn-primary">New game</button>
+                </div>
+            </div>
+
+            <br>
+            <hr>
+            <br>
+            <div id="game" class="container row justify-content-center">
+                <div id="board"></div>
+            </div>  
+            
+            <div id="helpBox">
+                <div class="container">
+                    <div class="row justify-content-center"><div class="col-4"><h2>How to play</h2></div></div>
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                The aim of minesweeper is to discover all the free spaces without detonating the mines. <br>
+                                The number that appears on the boxes clicked indicates the number of mines in the vicinity:
+                                left or right, top or bottom, or diagonally <br>
+                                Using the indications given by these figures, you can know where the mines are. <br> 
+                                If a box indicates "1" and there is only one undiscovered box next to it, then a mine is hiding there!
+                            </p>
+                        </div>
+                        <div class="col">
+                            <p>
+                                One click = free a box. <br>
+                                Double click = place/remove a flag. <br>
+                                It's your first time to play ? <br>
+                                don't worry, the basic are easy, just start trying and enjoy !
+                            </p>
+                        </div>
+                    </div>                    
+                </div>
+
+            </div>
+        </div>
+
+
+    </body>
+
+  <!-- used by bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- The Game CORE -->
+    <script type="text/javascript" src="cell.js" ></script>
+    <script type="text/javascript" src="game.js" ></script>
+    <!-- The Game CORE -->
+    
+    <!-- index.js file should be alwase loaded after "The Game CORE" js files -->
+    <script type="text/javascript" src="index.js"></script>
+  
+</html>
